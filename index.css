@@ -1,4 +1,4 @@
-/* 🌟 === Reset & Base === */
+/*=== Reset & Base === */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* 🌟 === Header === */
+/* === Header === */
 .head {
   text-align: center;
   padding: 1.5rem 0;
@@ -28,7 +28,7 @@ body {
   font-size: 2rem;
 }
 
-/* 🌟 === Inputs Section === */
+/* === Inputs Section === */
 .inputs {
   background: #2d2d2d;
   padding: 1rem;
@@ -57,18 +57,18 @@ input:focus {
   box-shadow: 0 0 6px rgba(255, 152, 0, 0.5);
 }
 
-/* 🌟 === Price & Discounts Inputs === */
+/* === Price & Discounts Inputs === */
 .price {
   display: flex;
   gap: 10px;
-  align-items: flex-end; /* يحافظ على ترتيب الحقول مع اللابل */
-  flex-wrap: wrap; /* يسمح بالانكسار على شاشات صغيرة */
+  align-items: flex-end; 
+  flex-wrap: wrap;
 }
 
 .price > div {
   display: flex;
   flex-direction: column;
-  flex: 1; /* كل حقل يأخذ مساحة متساوية */
+  flex: 1;
 }
 
 .price input {
@@ -95,7 +95,7 @@ input:focus {
 }
 
 
-/* 🌟 === Buttons === */
+/* === Buttons === */
 button {
   cursor: pointer;
   font-weight: 600;
@@ -117,7 +117,7 @@ button:active {
   font-size: 1rem;
 }
 
-/* 🌟 === Search Section === */
+/* === Search Section === */
 .outputs {
   background: #2d2d2d;
   padding: 1rem;
@@ -145,7 +145,7 @@ button:active {
   color: #fff;
 }
 
-/* 🌟 === Table === */
+/* === Table === */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -178,14 +178,14 @@ tbody tr:hover {
   background: #333;
 }
 
-/* 🌟 Total column highlight */
+/* Total column highlight */
 tbody td:nth-child(7) {
   font-weight: 600;
   color: #fff;
   border-radius: 4px;
 }
 
-/* 🌟 Action Buttons */
+/* Action Buttons */
 .btn-update,
 .btn-delete {
   display: inline-block;
@@ -230,7 +230,7 @@ tbody td:nth-child(7) {
   background-color: #c2185b;
 }
 
-/* 🌟 === Popup Notifications === */
+/* === Popup Notifications === */
 .popup-container {
   position: fixed;
   top: 20px;
@@ -264,14 +264,24 @@ tbody td:nth-child(7) {
   border-color: #622;
 }
 
-/* 🌟 === Responsive === */
+/* === Responsive === */
 @media (max-width: 992px) {
   body {
     width: 95%;
   }
 
   .price {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .price > div {
+    flex: 1 1 45%;
+  }
+
+  .price small#total {
+    flex: 1 1 100%;
+    margin-top: 8px;
   }
 
   th,
@@ -287,6 +297,16 @@ tbody td:nth-child(7) {
 
   table {
     font-size: 0.85rem;
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .price > div,
+  .price small#total {
+    flex: 1 1 100%;
   }
 
   .searchBy {
