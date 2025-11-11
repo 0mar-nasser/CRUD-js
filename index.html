@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="icon.png" />
+    <title>CRUD App | Product Management</title>
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h1>CRUD</h1>
+        <p>Create, Read, Update, Delete</p>
+      </div>
+
+      <div class="inputs">
+        <label for="title">Title:</label>
+        <input type="text" placeholder="Title" id="title" />
+
+        <div class="price">
+          <div>
+            <label for="price">Price:</label>
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="Price" />
+          </div>
+
+          <div>
+            <label for="taxes">Taxes:</label>
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes" />
+          </div>
+
+          <div>
+            <label for="ads">Ads:</label>
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads" />
+          </div>
+
+          <div>
+            <label for="discount">Discount:</label>
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount" />
+          </div>
+
+          <small id="total"></small>
+        </div>
+
+        <label for="count">Count:</label>
+        <input type="number" placeholder="Count" id="count" />
+
+        <label for="category">Category:</label>
+        <input type="text" placeholder="Category" id="category" />
+
+        <button id="submit">Create</button>
+      </div>
+
+      <div class="outputs">
+        <input
+          type="text"
+          placeholder="Search"
+          id="search"
+          onkeyup="searchProducts(this.value)"
+        />
+        <div class="searchBy">
+          <button onclick="setSearchMode('title')">Search By Title</button>
+          <button onclick="setSearchMode('category')">Search By Category</button>
+        </div>
+
+        <div id="deleteAllContainer"></div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Total</th>
+              <th>Count</th>
+              <th>Category</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Popup container -->
+    <div class="popup-container" id="popupContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
