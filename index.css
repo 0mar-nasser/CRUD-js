@@ -154,7 +154,7 @@ table {
   border-radius: 10px;
   overflow: hidden;
   color: #e0e0e0;
-  text-align: center; /* يوسّط كل النصوص */
+  text-align: center;
 }
 
 thead {
@@ -165,13 +165,13 @@ thead {
 thead th {
   padding: 12px;
   text-transform: capitalize;
-  vertical-align: middle; /* وسط عمودي */
+  vertical-align: middle;
 }
 
 tbody td {
   padding: 10px;
   border-bottom: 1px solid #333;
-  vertical-align: middle; /* وسط عمودي */
+  vertical-align: middle;
 }
 
 tbody tr:hover {
