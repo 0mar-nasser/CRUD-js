@@ -86,7 +86,6 @@ function saveProduct() {
 
   // === Add or Update ===
   if (mode === "create") {
-    // إذا المستخدم كتب count أكبر من 1، نضيف منتج واحد فقط (بدون تكرار)
     products.push(product);
     showPopup("✅ Product added successfully!");
   } else {
@@ -171,7 +170,7 @@ function editProduct(index) {
 
   getTotal();
 
-  countInput.style.display = "none"; // نخفي الـ count أثناء التعديل
+  countInput.style.display = "none";
   submitBtn.textContent = "Update";
   mode = "update";
   tempIndex = index;
